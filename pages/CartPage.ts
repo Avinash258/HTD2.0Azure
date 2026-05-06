@@ -15,13 +15,13 @@ export class CartPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    // Initialize locators using Playwright default locators
-    this.cartItems = page.getByTestId('inventory-item');
-    this.cartItemName = page.getByTestId('inventory-item-name');
+    // Initialize locators using data-test attributes
+    this.cartItems = page.locator('[data-test="inventory-item"]');
+    this.cartItemName = page.locator('[data-test="inventory-item-name"]');
     this.continueShoppingButton = page.getByRole('button', { name: /continue shopping/i });
-    this.checkoutButton = page.getByTestId('checkout');
+    this.checkoutButton = page.locator('[data-test="checkout"]');
     this.removeButton = page.getByRole('button', { name: /remove/i });
-    this.pageTitle = page.getByTestId('title');
+    this.pageTitle = page.locator('[data-test="title"]');
   }
 
   /**

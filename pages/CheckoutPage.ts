@@ -33,30 +33,30 @@ export class CheckoutPage extends BasePage {
   constructor(page: Page) {
     super(page);
     
-    // Step 1 locators using Playwright default locators
-    this.firstNameInput = page.getByTestId('firstName');
-    this.lastNameInput = page.getByTestId('lastName');
-    this.postalCodeInput = page.getByTestId('postalCode');
-    this.cancelButton = page.getByTestId('cancel');
-    this.continueButton = page.getByTestId('continue');
-    this.errorMessage = page.getByTestId('error');
-    this.errorCloseButton = page.getByTestId('error-button');
-    this.pageTitle = page.getByTestId('title');
+    // Step 1 locators using data-test attributes
+    this.firstNameInput = page.locator('[data-test="firstName"]');
+    this.lastNameInput = page.locator('[data-test="lastName"]');
+    this.postalCodeInput = page.locator('[data-test="postalCode"]');
+    this.cancelButton = page.locator('[data-test="cancel"]');
+    this.continueButton = page.locator('[data-test="continue"]');
+    this.errorMessage = page.locator('[data-test="error"]');
+    this.errorCloseButton = page.locator('[data-test="error-button"]');
+    this.pageTitle = page.locator('[data-test="title"]');
 
     // Step 2 locators
-    this.cartItems = page.getByTestId('inventory-item');
+    this.cartItems = page.locator('[data-test="inventory-item"]');
     this.paymentInfo = page.getByText('Payment Information');
     this.shippingInfo = page.getByText('Shipping Information');
     this.itemTotal = page.getByText('Item total:');
     this.tax = page.getByText('Tax:');
     this.totalAmount = page.getByText('Total:');
-    this.finishButton = page.getByTestId('finish');
+    this.finishButton = page.locator('[data-test="finish"]');
 
     // Complete page locators
     this.confirmationHeading = page.getByRole('heading', { name: /thank you for your order/i });
     this.confirmationMessage = page.getByText(/Your order has been dispatched/i);
     this.ponyExpressImage = page.getByAltText('Pony Express');
-    this.backHomeButton = page.getByTestId('back-to-products');
+    this.backHomeButton = page.locator('[data-test="back-to-products"]');
   }
 
   /**

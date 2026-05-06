@@ -14,12 +14,12 @@ export class LoginPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    // Initialize locators using Playwright default locators
-    this.usernameInput = page.getByPlaceholder('Username');
-    this.passwordInput = page.getByPlaceholder('Password');
-    this.loginButton = page.getByRole('button', { name: /login/i });
-    this.errorMessage = page.getByTestId('error');
-    this.appLogo = page.getByAltText('Swag Labs');
+    // Initialize locators using data-test attributes
+    this.usernameInput = page.locator('[data-test="username"]');
+    this.passwordInput = page.locator('[data-test="password"]');
+    this.loginButton = page.locator('[data-test="login-button"]');
+    this.errorMessage = page.locator('[data-test="error"]');
+    this.appLogo = page.locator('.login_logo');
   }
 
   /**

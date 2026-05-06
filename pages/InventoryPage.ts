@@ -15,13 +15,13 @@ export class InventoryPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    // Initialize locators using Playwright default locators
-    this.inventoryList = page.getByTestId('inventory-list');
-    this.inventoryItems = page.getByTestId('inventory-item');
-    this.sortDropdown = page.getByTestId('product-sort-container');
-    this.cartBadge = page.getByTestId('shopping-cart-badge');
-    this.cartLink = page.getByTestId('shopping-cart-link');
-    this.addToCartButton = page.getByTestId('add-to-cart-sauce-labs-backpack');
+    // Initialize locators using data-test attributes
+    this.inventoryList = page.locator('[data-test="inventory-list"]');
+    this.inventoryItems = page.locator('[data-test="inventory-item"]');
+    this.sortDropdown = page.locator('[data-test="product-sort-container"]');
+    this.cartBadge = page.locator('[data-test="shopping-cart-badge"]');
+    this.cartLink = page.locator('[data-test="shopping-cart-link"]');
+    this.addToCartButton = page.locator('[data-test="add-to-cart-sauce-labs-backpack"]');
   }
 
   /**
@@ -50,7 +50,7 @@ export class InventoryPage extends BasePage {
    * Add specific item to cart by data-test ID
    */
   async addItemToCart(itemId: string): Promise<void> {
-    const addButton = this.page.getByTestId(`add-to-cart-${itemId}`);
+    const addButton = this.page.locator(`[data-test="add-to-cart-${itemId}"]`);
     await addButton.click();
   }
 
