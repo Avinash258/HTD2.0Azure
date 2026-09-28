@@ -1,12 +1,12 @@
-# HTD 2.0 Azure — Playwright Test Framework
+# HTD 2.0 Azure â€” Playwright Test Framework
 
 Page Object Model Playwright framework for **Sauce Demo**, structured for Azure-oriented delivery and CoE-style training.
 
-> Companion to [PlaywrightTSFrameWork](https://github.com/Avinash258/PlaywrightTSFrameWork) · [Portfolio](https://avinash258.github.io/Protfolio/)
+> Companion to [PlaywrightTSFrameWork](https://github.com/Avinash258/PlaywrightTSFrameWork) Â· [Portfolio](https://avinash258.github.io/Protfolio/)
 
 ## Overview
 
-Clean POM layout with pages, specs, shared utils and test data — suitable as a teaching / onboarding baseline for Playwright on Azure DevOps programs (HTD 2.0 style workshops).
+Clean POM layout with pages, specs, shared utils and test data â€” suitable as a teaching / onboarding baseline for Playwright on Azure DevOps programs (HTD 2.0 style workshops).
 
 ## Features
 
@@ -18,8 +18,8 @@ Clean POM layout with pages, specs, shared utils and test data — suitable as a
 
 ## Stack
 
-- TypeScript · Playwright
-- Azure / GitHub workflow–friendly layout
+- TypeScript Â· Playwright
+- Azure / GitHub workflowâ€“friendly layout
 
 ## Getting started
 
@@ -49,5 +49,5 @@ testPlan/   planning artefacts
 
 ## Author
 
-**Pushanshu Avinash Sharma** — QA Automation Architect / Lead SDET  
-[GitHub](https://github.com/Avinash258) · [LinkedIn](https://www.linkedin.com/in/p-avinash-sharma-8b0203b9/) · [Portfolio](https://avinash258.github.io/Protfolio/)
+**Avinash Sharma** â€” QA Automation Architect / Lead SDET  
+[GitHub](https://github.com/Avinash258) Â· [LinkedIn](https://www.linkedin.com/in/p-avinash-sharma-8b0203b9/) Â· [Portfolio](https://avinash258.github.io/Protfolio/)
